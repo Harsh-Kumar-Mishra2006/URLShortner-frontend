@@ -4,6 +4,7 @@ import React from "react";
 interface StatsCardProps {
   title: string;
   value: string | number;
+  icon?: React.ComponentType<any>;
   trend?: string;
   description?: string;
   gradient?: boolean;

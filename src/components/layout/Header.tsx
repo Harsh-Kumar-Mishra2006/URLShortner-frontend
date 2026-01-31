@@ -41,13 +41,6 @@ const Header: React.FC = () => {
               <BarChart3 className="h-4 w-4" />
               <span>Dashboard</span>
             </Link>
-            <Link
-              to="/analytics"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-            >
-              <BarChart3 className="h-4 w-4" />
-              <span>Analytics</span>
-            </Link>
           </nav>
 
           {/* Desktop Actions */}

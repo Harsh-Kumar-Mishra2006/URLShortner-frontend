@@ -6,6 +6,7 @@ interface CardProps {
   title?: string;
   subtitle?: string;
   footer?: React.ReactNode;
+  gradient?: boolean; // Add this
   className?: string;
   hover?: boolean;
   padding?: "sm" | "md" | "lg" | "none";

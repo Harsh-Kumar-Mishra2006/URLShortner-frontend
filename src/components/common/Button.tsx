@@ -6,6 +6,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg";
   loading?: boolean;
   fullWidth?: boolean;
+  icon?: React.ComponentType<any>; // Add this
+  asChild?: boolean; // Add this for Radix UI composition
 }
 
 const Button: React.FC<ButtonProps> = ({
