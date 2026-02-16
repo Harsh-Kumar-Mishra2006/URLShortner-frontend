@@ -1,4 +1,4 @@
-# SwiftURL – High-Throughput URL Shortener
+# URLShortner App – High-Throughput URL Shortener
 
 [![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
