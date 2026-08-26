@@ -6,15 +6,13 @@ export interface ShortUrl {
   expiresAt?: string;
   createdAt: string;
   clicks?: number;
-  isActive?: boolean;
-  // REMOVE userId since backend has no users
+  isActive?: boolean; 
 }
 
 export interface ShortenRequest {
   originalUrl: string;
   customId?: string;
   expiresIn?: number;
-  // REMOVE userId from request
 }
 
 export interface AnalyticsData {
@@ -51,7 +49,6 @@ export interface PaginationData {
   totalPages: number;
 }
 
-// REMOVE User interface since no authentication
 
 export interface Stats {
   totalUrls: number;

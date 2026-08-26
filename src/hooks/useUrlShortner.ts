@@ -1,4 +1,4 @@
-// hooks/useUrlShortener.ts - SIMPLIFIED
+// hooks/useUrlShortener.ts 
 import { useState, useCallback } from 'react';
 import type { ShortUrl, ShortenRequest } from '../types';
 import { urlService } from '../services/api';
@@ -18,7 +18,7 @@ export const useUrlShortener = (): UseUrlShortenerReturn => {
   const [error, setError] = useState<string | null>(null);
 
   const shortenUrl = useCallback(async (data: ShortenRequest): Promise<ShortUrl | null> => {
-    // Validate URL
+
     if (!data.originalUrl.trim()) {
       setError('URL is required');
       return null;

@@ -16,7 +16,6 @@ interface UrlContextType {
   deleteUrl: (shortId: string) => Promise<boolean>;
   deactivateUrl: (shortId: string) => Promise<boolean>;
   clearError: () => void;
-  // REMOVE getUserUrls, getAllUrls, getStats
 }
 
 interface UrlState {
@@ -24,7 +23,6 @@ interface UrlState {
   loading: boolean;
   error: string | null;
   currentUrl: ShortUrl | null;
-  // REMOVE stats
 }
 
 type UrlAction =
@@ -113,8 +111,6 @@ export const UrlProvider: React.FC<UrlProviderProps> = ({ children }) => {
       return null;
     }
   };
-
-  // REMOVE getUserUrls and getAllUrls
 
   const getAnalytics = async (
     shortId: string,

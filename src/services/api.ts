@@ -18,10 +18,7 @@ const api = axios.create({
   timeout: 10000,
 });
 
-// REMOVE authentication interceptors since backend has no auth
-// REMOVE request interceptor with token
-
-// Response interceptor - simplified
+// Response interceptor 
 api.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -57,13 +54,10 @@ export const urlService = {
     }
   },
 
-  // REMOVE getUserUrls - backend doesn't have users
 
-  // Get all URLs (public - anyone can see all URLs)
+  // Get all URLs
   getAllUrls: async (page = 1, limit = 50): Promise<ApiResponse<{ data: ShortUrl[], pagination: PaginationData }>> => {
     try {
-      // Since backend doesn't have this endpoint, we need to create it
-      // For now, we'll skip this or implement it differently
       return {
         success: false,
         error: 'Endpoint not implemented yet',
@@ -76,7 +70,7 @@ export const urlService = {
     }
   },
 
-  // Deactivate a URL (public - anyone can deactivate)
+  // Deactivate a URL 
   deactivateUrl: async (shortId: string): Promise<ApiResponse<ShortUrl>> => {
     try {
       const response = await api.patch(`/api/url/deactivate/${shortId}`);
@@ -89,7 +83,7 @@ export const urlService = {
     }
   },
 
-  // Delete a URL (public - anyone can delete)
+  // Delete a URL
   deleteUrl: async (shortId: string): Promise<ApiResponse<{ message: string }>> => {
     try {
       const response = await api.delete(`/api/url/delete/${shortId}`);
@@ -115,10 +109,9 @@ export const urlService = {
     }
   },
 
-  // Get stats - remove or implement differently
+  // Get stats 
   getStats: async (): Promise<ApiResponse<any>> => {
     try {
-      // Since backend doesn't have stats endpoint, we'll skip for now
       return {
         success: false,
         error: 'Stats endpoint not implemented',
